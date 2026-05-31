@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OrbitClean Edge — Autonomous Orbital Defense</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Share+Tech+Mono&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="starfield"></div>
+
+<header>
+  <a class="logo" href="#">
+    <svg class="logo-img" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone do satélite OrbitClean Edge">
+      <circle cx="16" cy="16" r="5" stroke="currentColor" stroke-width="1.5"/>
+      <line x1="0" y1="16" x2="32" y2="16" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2" opacity=".5"/>
+      <line x1="16" y1="0" x2="16" y2="32" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2" opacity=".5"/>
+      <circle cx="16" cy="16" r="2" fill="currentColor"/>
+      <rect x="7" y="14" width="5" height="4" rx="1" stroke="currentColor" stroke-width="1.2"/>
+      <rect x="20" y="14" width="5" height="4" rx="1" stroke="currentColor" stroke-width="1.2"/>
+    </svg>
+    <span>Orbit</span>Clean <span>EDGE</span>
+  </a>
+  <nav>
+    <a href="#problema">Problema</a>
+    <a href="#tecnologia">Tecnologia</a>
+    <a href="#objetivos">Objetivos</a>
+    <a href="#publico">Público-alvo</a>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#aplicacao">Aplicação</a>
+  </nav>
+  <div class="theme-btns">
+    <button class="theme-btn std active" onclick="setTheme('')">◉ PADRÃO</button>
+    <button class="theme-btn alrt"       onclick="setTheme('theme-alert')">⚠ ALERTA</button>
+    <button class="theme-btn diag"       onclick="setTheme('theme-diag')">◈ DIAGNÓSTICO</button>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="orbit-ring ring1"></div>
+  <div class="orbit-ring ring2"></div>
+  <div class="orbit-ring ring3"></div>
+  <div class="container hero-container">
+    <div class="hero-badge">FIAP Global Solution 2026 · Edge AI &amp; Mesh Networks</div>
+    <h1 class="hero-title">Orbit<span>Clean</span><br/>Edge</h1>
+    <p class="hero-sub">Evasão autônoma de detritos na borda.<br/>Sem latência. Sem colisões. Sem Kessler.</p>
+    <div class="hero-cta">
+      <a href="#tecnologia" class="btn-primary">Ver Tecnologia</a>
+      <a href="#aplicacao"  class="btn-ghost">Ver Aplicação</a>
+    </div>
+    <!-- SVG: satélite hero -->
+    <svg class="hero-img" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Satélite em órbita baixa terrestre evadindo detrito espacial">
+      <circle cx="100" cy="100" r="30" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="100" cy="100" r="55" stroke="currentColor" stroke-width="0.8" stroke-dasharray="6 4" opacity=".4"/>
+      <circle cx="100" cy="100" r="80" stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 6" opacity=".2"/>
+      <circle cx="100" cy="100" r="8" fill="currentColor" opacity=".9"/>
+      <rect x="55"  y="95" width="30" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+      <rect x="115" y="95" width="30" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="155" cy="45" r="6" stroke="currentColor" stroke-width="1.2" opacity=".6"/>
+      <circle cx="40"  cy="160" r="4" stroke="currentColor" stroke-width="1" opacity=".4"/>
+      <circle cx="170" cy="130" r="3" stroke="currentColor" stroke-width="1" opacity=".3"/>
+    </svg>
+  </div>
+</section>
+
+<section id="problema">
+  <div class="container">
+    <p class="sec-label">// 01 — Problema</p>
+    <h2 class="sec-title">A <span>Latência</span> que destrói órbitas</h2>
+    <div class="sec-divider"></div>
+    <p class="sec-intro">Satélites a 28.000 km/h não esperam comandos do solo.</p>
+    <p class="sec-intro">Cada minuto de atraso aumenta o risco de colisão catastrófica.</p>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <!-- SVG: detritos -->
+        <svg class="stat-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone de detritos espaciais catalogados">
+          <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.2" opacity=".7"/>
+          <circle cx="38" cy="14" r="2" stroke="currentColor" stroke-width="1"   opacity=".5"/>
+          <circle cx="8"  cy="32" r="2" stroke="currentColor" stroke-width="1"   opacity=".5"/>
+          <circle cx="40" cy="36" r="3" stroke="currentColor" stroke-width="1.2" opacity=".7"/>
+          <circle cx="24" cy="24" r="4" fill="currentColor"/>
+        </svg>
+        <div class="stat-num">+27K</div>
+        <div class="stat-label">Detritos catalogados</div>
+        <div class="stat-desc">Em órbita terrestre. Crescendo exponencialmente.</div>
+      </div>
+      <div class="stat-card">
+        <!-- SVG: velocidade -->
+        <svg class="stat-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone de velocidade orbital LEO">
+          <path d="M8 24 Q24 8 40 24" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <circle cx="40" cy="24" r="4" fill="currentColor"/>
+          <line x1="8" y1="28" x2="24" y2="28" stroke="currentColor" stroke-width="1" opacity=".4"/>
+          <line x1="8" y1="32" x2="18" y2="32" stroke="currentColor" stroke-width="1" opacity=".3"/>
+        </svg>
+        <div class="stat-num">28K</div>
+        <div class="stat-label">km/h — Velocidade LEO</div>
+        <div class="stat-desc">Impacto em milissegundos. Decisão deve ser local.</div>
+      </div>
+      <div class="stat-card">
+        <!-- SVG: custo -->
+        <svg class="stat-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone de custo financeiro por satélite perdido">
+          <rect x="10" y="16" width="28" height="20" rx="3" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M24 10 L24 16 M24 36 L24 38" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M19 22 Q19 20 24 20 Q29 20 29 24 Q29 28 24 28 Q19 28 19 32 Q19 36 24 36 Q29 36 29 34" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <div class="stat-num">$500M</div>
+        <div class="stat-label">Custo por satélite perdido</div>
+        <div class="stat-desc">Risco financeiro de cada colisão em LEO.</div>
+      </div>
+      <div class="stat-card">
+        <!-- SVG: latência -->
+        <svg class="stat-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone de latência de comunicação solo-espaço">
+          <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="24" y1="10" x2="24" y2="24" stroke="currentColor" stroke-width="2"/>
+          <line x1="24" y1="24" x2="34" y2="30" stroke="currentColor" stroke-width="1.5" opacity=".6"/>
+          <circle cx="24" cy="24" r="2" fill="currentColor"/>
+        </svg>
+        <div class="stat-num">&gt;400ms</div>
+        <div class="stat-label">Latência solo-espaço</div>
+        <div class="stat-desc">Inviável para manobra de evasão emergencial.</div>
+      </div>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-item">
+        <h3>⚠ Síndrome de Kessler</h3>
+        <p>Colisões geram mais detritos. Crescimento exponencial incontrolável.</p>
+      </div>
+      <div class="problem-item">
+        <h3>⚠ Modelo Solo-Centrado</h3>
+        <p>Uplink de comando é lento demais. Decisão precisa ser embarcada.</p>
+      </div>
+      <div class="problem-item">
+        <h3>⚠ Efeito Cascata Global</h3>
+        <p>Uma colisão pode inviabilizar a órbita. GPS e internet em risco.</p>
+      </div>
+    </div>
+
+    <img
+      src="images/satelite-orbita.svg"
+      alt="Satélite em órbita baixa terrestre próximo a detritos espaciais com vetor de evasão autônoma"
+      class="section-img"
+    />
+  </div>
+</section>
+
+<section id="tecnologia">
+  <div class="container">
+    <p class="sec-label">// 02 — Tecnologia</p>
+    <h2 class="sec-title">Edge <span>AI</span> Embarcada</h2>
+    <div class="sec-divider"></div>
+    <p class="sec-intro">IA embarcada decide em milissegundos, sem depender do solo.</p>
+    <p class="sec-intro">Arduino, C++, Python e JavaScript formam o ecossistema completo.</p>
+
+    <div class="slideshow-wrap">
+      <div class="slides" id="slides">
+        <div class="slide slide-1">
+          <svg class="slide-img" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustração do sensor radar e LIDAR de detecção de detritos orbitais">
+            <circle cx="48" cy="48" r="16" stroke="currentColor" stroke-width="2"/>
+            <circle cx="48" cy="48" r="30" stroke="currentColor" stroke-width="1" stroke-dasharray="6 4" opacity=".5"/>
+            <circle cx="48" cy="48" r="44" stroke="currentColor" stroke-width="0.8" stroke-dasharray="4 5" opacity=".3"/>
+            <circle cx="48" cy="48" r="5"  fill="currentColor"/>
+            <line x1="48" y1="4"  x2="48" y2="44" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="48" y1="52" x2="48" y2="92" stroke="currentColor" stroke-width="1.5" opacity=".4"/>
+            <circle cx="78" cy="22" r="5" stroke="currentColor" stroke-width="1.5" opacity=".7"/>
+          </svg>
+          <h3>DETECÇÃO RADAR/LIDAR</h3>
+          <p>Sensor HC-SR04 simula radar óptico orbital com leituras a cada 50ms.</p>
+        </div>
+        <div class="slide slide-2">
+          <svg class="slide-img" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustração da inteligência artificial autônoma tomando decisão de evasão">
+            <rect x="20" y="28" width="56" height="40" rx="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="32" y1="28" x2="32" y2="20" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="64" y1="28" x2="64" y2="20" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="32" cy="18" r="3" fill="currentColor"/>
+            <circle cx="64" cy="18" r="3" fill="currentColor"/>
+            <circle cx="36" cy="46" r="4" fill="currentColor" opacity=".8"/>
+            <circle cx="48" cy="46" r="4" fill="currentColor"/>
+            <circle cx="60" cy="46" r="4" fill="currentColor" opacity=".8"/>
+            <path d="M36 58 Q48 52 60 58" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <h3>DECISÃO AUTÔNOMA NA BORDA</h3>
+          <p>IA local calcula vetor de evasão sem comunicação com o solo.</p>
+        </div>
+        <div class="slide slide-3">
+          <svg class="slide-img" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustração da rede mesh inter-satélite propagando vetores orbitais">
+            <circle cx="48" cy="20" r="6" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="20" cy="68" r="6" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="76" cy="68" r="6" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="48" cy="48" r="5" fill="currentColor"/>
+            <line x1="48" y1="26" x2="48" y2="43" stroke="currentColor" stroke-width="1.2"/>
+            <line x1="25" y1="65" x2="43" y2="51" stroke="currentColor" stroke-width="1.2"/>
+            <line x1="71" y1="65" x2="53" y2="51" stroke="currentColor" stroke-width="1.2"/>
+            <line x1="26" y1="68" x2="70" y2="68" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity=".5"/>
+            <line x1="24" y1="63" x2="44" y2="24" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity=".5"/>
+            <line x1="72" y1="63" x2="52" y2="24" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3" opacity=".5"/>
+          </svg>
+          <h3>MESH NETWORK INTER-SATÉLITE</h3>
+          <p>Novos vetores propagados instantaneamente para toda a constelação.</p>
+        </div>
+      </div>
+      <button class="ss-btn ss-prev" onclick="slidePrev()">&#8249;</button>
+      <button class="ss-btn ss-next" onclick="slideNext()">&#8250;</button>
+      <div class="ss-dots" id="ssDots">
+        <div class="dot active" onclick="goSlide(0)"></div>
+        <div class="dot"        onclick="goSlide(1)"></div>
+        <div class="dot"        onclick="goSlide(2)"></div>
+      </div>
+    </div>
+
+    <div class="tech-flow">
+      <div class="tech-step">
+        <svg class="tech-icon-img" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone de radar óptico orbital">
+          <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="1" stroke-dasharray="5 3" opacity=".5"/>
+          <circle cx="24" cy="24" r="3"  fill="currentColor"/>
+          <line x1="24" y1="6"  x2="24" y2="14" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <h3>Radar Óptico</h3>
+        <p>Detecta detritos com sensor HC-SR04 simulando LIDAR orbital.</p>
+      </div>
+      <div class="tech-step">
+        <svg class="tech-icon-img" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone de Edge AI processamento embarcado">
+          <rect x="10" y="14" width="28" height="20" rx="4" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="18" cy="24" r="3" fill="currentColor"/>
+          <circle cx="24" cy="24" r="3" fill="currentColor" opacity=".7"/>
+          <circle cx="30" cy="24" r="3" fill="currentColor" opacity=".4"/>
+          <line x1="14" y1="10" x2="14" y2="14" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="24" y1="10" x2="24" y2="14" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="34" y1="10" x2="34" y2="14" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <h3>Edge AI</h3>
+        <p>Calcula impacto em menos de 50ms. Decisão 100% embarcada.</p>
+      </div>
+      <div class="tech-step">
+        <svg class="tech-icon-img" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone de sistema de controle de reação RCS dos propulsores">
+          <circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M24 16 L24 8 L20 12 M24 8 L28 12" stroke="currentColor" stroke-width="1.3"/>
+          <path d="M24 32 L24 40 L20 36 M24 40 L28 36" stroke="currentColor" stroke-width="1.3"/>
+          <circle cx="24" cy="24" r="3" fill="currentColor"/>
+        </svg>
+        <h3>RCS Autônomo</h3>
+        <p>Servo-motores acionados automaticamente simulando propulsores orbitais.</p>
+      </div>
+      <div class="tech-step">
+        <svg class="tech-icon-img" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone de rede mesh inter-satélite">
+          <circle cx="24" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="10" cy="34" r="4" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="38" cy="34" r="4" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="24" y1="14" x2="13"  y2="31" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="24" y1="14" x2="35"  y2="31" stroke="currentColor" stroke-width="1.2"/>
+          <line x1="14" y1="34" x2="34"  y2="34" stroke="currentColor" stroke-width="1.2"/>
+        </svg>
+        <h3>Mesh Broadcast</h3>
+        <p>Vetor propagado à constelação. Vizinhos recalibram imediatamente.</p>
+      </div>
+    </div>
+
+    <div class="tech-specs">
+      <span class="spec-tag">Arduino Uno R3</span>
+      <span class="spec-tag">HC-SR04 Ultrassônico</span>
+      <span class="spec-tag">Servo RCS x2</span>
+      <span class="spec-tag">TMP36 Temperatura</span>
+      <span class="spec-tag">LCD 16x2 Telemetria</span>
+      <span class="spec-tag">C++ Embarcado</span>
+      <span class="spec-tag">Mesh Network</span>
+      <span class="spec-tag">Python + Matplotlib</span>
+    </div>
+
+    <img
+      src="images/mesh-network.svg"
+      alt="Diagrama da rede mesh inter-satélite mostrando comunicação autônoma entre satélites da constelação"
+      class="section-img"
+    />
+  </div>
+</section>
+
+<section id="objetivos">
+  <div class="container">
+    <p class="sec-label">// 03 — Objetivos</p>
+    <h2 class="sec-title">O que a <span>OrbitClean</span> resolve</h2>
+    <div class="sec-divider"></div>
+    <p class="sec-intro">Cinco objetivos técnicos que tornam as órbitas mais seguras.</p>
+    <p class="sec-intro">Cada meta elimina um ponto crítico de falha do modelo atual.</p>
+    <div class="obj-grid">
+      <div class="obj-card">
+        <div class="obj-num">01</div>
+        <h3>Evasão em tempo real</h3>
+        <p>Decisão de manobra em menos de 50ms, sem uplink do solo.</p>
+      </div>
+      <div class="obj-card">
+        <div class="obj-num">02</div>
+        <h3>Frear o efeito cascata</h3>
+        <p>Conter a Síndrome de Kessler antes que se torne irreversível.</p>
+      </div>
+      <div class="obj-card">
+        <div class="obj-num">03</div>
+        <h3>Eficiência de propelente</h3>
+        <p>Micro-correções calculadas pela IA consomem menos combustível.</p>
+      </div>
+      <div class="obj-card">
+        <div class="obj-num">04</div>
+        <h3>Resiliência de constelação</h3>
+        <p>Toda a frota compartilha vetores em self-healing colaborativo.</p>
+      </div>
+      <div class="obj-card">
+        <div class="obj-num">05</div>
+        <h3>Auditoria transparente</h3>
+        <p>Logs automáticos enviados ao solo para revisão pós-manobra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publico">
+  <div class="container">
+    <p class="sec-label">// 04 — Público-Alvo</p>
+    <h2 class="sec-title">Operadores de <span>Constelações</span></h2>
+    <div class="sec-divider"></div>
+    <p class="sec-intro">De operadoras comerciais a agências governamentais e defesa.</p>
+    <p class="sec-intro">Todos se beneficiam de órbitas seguras e confiáveis.</p>
+    <div class="audience-grid">
+      <div class="aud-card">
+        <svg class="aud-icon-img" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone representando operadoras comerciais de satélites">
+          <rect x="8"  y="20" width="32" height="22" rx="2" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M16 20 L16 14 Q16 8 24 8 Q32 8 32 14 L32 20" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="24" y1="28" x2="24" y2="36" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="20" y1="32" x2="28" y2="32" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <h3>Operadoras Comerciais</h3>
+        <p>SpaceX Starlink e Amazon Kuiper. Milhares de satélites em risco crescente.</p>
+      </div>
+      <div class="aud-card">
+        <svg class="aud-icon-img" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone representando agências espaciais como NASA e ESA">
+          <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.5"/>
+          <ellipse cx="24" cy="24" rx="14" ry="6" stroke="currentColor" stroke-width="1" opacity=".5"/>
+          <line x1="10" y1="24" x2="38" y2="24" stroke="currentColor" stroke-width="1" opacity=".4"/>
+          <line x1="24" y1="10" x2="24" y2="38" stroke="currentColor" stroke-width="1" opacity=".4"/>
+          <circle cx="24" cy="24" r="3" fill="currentColor"/>
+        </svg>
+        <h3>Agências Espaciais</h3>
+        <p>NASA, ESA e AEB. Missões científicas vulneráveis a detritos em LEO.</p>
+      </div>
+      <div class="aud-card">
+        <svg class="aud-icon-img" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone representando operadoras de telecomunicações via satélite">
+          <path d="M14 34 Q14 18 24 12 Q34 18 34 34" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M18 34 Q18 22 24 18 Q30 22 30 34" stroke="currentColor" stroke-width="1.2" opacity=".6"/>
+          <line x1="24" y1="10" x2="24" y2="38" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="24" cy="38" r="3" fill="currentColor"/>
+        </svg>
+        <h3>Operadoras de Telecom</h3>
+        <p>Intelsat e SES. Satélites de alto valor e baixa redundância orbital.</p>
+      </div>
+      <div class="aud-card">
+        <svg class="aud-icon-img" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ícone representando forças de defesa e segurança nacional">
+          <path d="M24 6 L38 12 L38 26 Q38 36 24 42 Q10 36 10 26 L10 12 Z" stroke="currentColor" stroke-width="1.5"/>
+          <polyline points="17,24 22,30 31,18" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <h3>Defesa e Segurança</h3>
+        <p>Governos e forças armadas com satélites de observação estratégica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beneficios">
+  <div class="container">
+    <p class="sec-label">// 05 — Benefícios</p>
+    <h2 class="sec-title">Por que <span>Edge</span> muda tudo</h2>
+    <div class="sec-divider"></div>
+    <p class="sec-intro">A descentralização elimina os gargalos do modelo tradicional.</p>
+    <p class="sec-intro">Cada benefício representa melhoria mensurável na operação orbital.</p>
+    <div class="benefit-row">
+      <div class="benefit-item">
+        <h3>⚡ Latência zero</h3>
+        <p>Decisão local elimina atraso solo-espaço. Resposta em milissegundos.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>💰 Redução de perdas</h3>
+        <p>Evitar uma colisão poupa centenas de milhões de dólares por satélite.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>🔋 Eficiência orbital</h3>
+        <p>Micro-manobras ótimas conservam propelente e estendem vida útil.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>🌐 Resiliência mesh</h3>
+        <p>Frota inteira reage como organismo. Sem ponto único de falha.</p>
+      </div>
+      <div class="benefit-item">
+        <h3>📊 Auditoria IA</h3>
+        <p>Logs detalhados de cada decisão para análise humana pós-evento.</p>
+      </div>
+    </div>
+    <div class="ods-badges">
+      <span class="ods-badge ods-9">🏭 ODS 9 — Indústria, Inovação e Infraestrutura</span>
+      <span class="ods-badge ods-11">🏙️ ODS 11 — Cidades e Comunidades Sustentáveis</span>
+    </div>
+  </div>
+</section>
+
+<section id="aplicacao">
+  <div class="container">
+    <p class="sec-label">// 06 — Aplicação no Dia a Dia</p>
+    <h2 class="sec-title">Como funciona na <span>prática</span></h2>
+    <div class="sec-divider"></div>
+    <p class="sec-intro">Do hardware embarcado ao dashboard web, o fluxo é automático.</p>
+    <p class="sec-intro">O operador audita — a IA age. Sem intervenção manual emergencial.</p>
+    <div class="app-steps">
+      <div class="app-step" data-n="1">
+        <div class="app-step-body">
+          <h3>Detecção de detrito</h3>
+          <p>Sensor HC-SR04 lê proximidade em tempo real e aciona alerta automático.</p>
+        </div>
+      </div>
+      <div class="app-step" data-n="2">
+        <div class="app-step-body">
+          <h3>Cálculo de evasão</h3>
+          <p>IA embarcada define o vetor ótimo e aciona propulsores RCS em milissegundos.</p>
+        </div>
+      </div>
+      <div class="app-step" data-n="3">
+        <div class="app-step-body">
+          <h3>Broadcast mesh</h3>
+          <p>Novo vetor propagado via rede em malha para toda a constelação vizinha.</p>
+        </div>
+      </div>
+      <div class="app-step" data-n="4">
+        <div class="app-step-body">
+          <h3>Log automático</h3>
+          <p>Telemetria estruturada enviada ao solo. Engenheiros auditam o dashboard web.</p>
+        </div>
+      </div>
+      <div class="app-step" data-n="5">
+        <div class="app-step-body">
+          <h3>Modelagem de risco</h3>
+          <p>Script Python plota curva N(t)=N₀·eᵏᵗ mostrando o crescimento do lixo orbital.</p>
+        </div>
+      </div>
+    </div>
+
+    <img
+      src="images/kessler-diagram.svg"
+      alt="Gráfico do crescimento exponencial de detritos espaciais modelado pela Síndrome de Kessler N(t) igual a N0 vezes e elevado a kt"
+      class="section-img"
+    />
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">
+    <a class="logo" href="#">
+      <svg class="logo-img" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo OrbitClean Edge">
+        <circle cx="16" cy="16" r="5" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="0" y1="16" x2="32" y2="16" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2" opacity=".5"/>
+        <line x1="16" y1="0" x2="16" y2="32" stroke="currentColor" stroke-width="1" stroke-dasharray="3 2" opacity=".5"/>
+        <circle cx="16" cy="16" r="2" fill="currentColor"/>
+        <rect x="7"  y="14" width="5" height="4" rx="1" stroke="currentColor" stroke-width="1.2"/>
+        <rect x="20" y="14" width="5" height="4" rx="1" stroke="currentColor" stroke-width="1.2"/>
+      </svg>
+      <span>Orbit</span>Clean <span>EDGE</span>
+    </a>
+    <span class="footer-tagline">FIAP Global Solution 2026 · Eng. de Software 1º Ano</span>
+  </div>
+
+  <div class="footer-team">
+    <p class="footer-team-title">Equipe</p>
+    <ul class="footer-members">
+      <li>Gabriel      <span class="rm">RM: 563680</span></li>
+      <li>Andrey Luigi  <span class="rm">RM: 569575</span></li>
+      <li>Lucas         <span class="rm">RM: 569731</span></li>
+      <li>Nicolas       <span class="rm">RM: 571510</span></li>
+      <li>Henrique      <span class="rm">RM: 569137</span></li>
+    </ul>
+  </div>
+
+  <div class="footer-links">
+    <a href="#problema">Problema</a>
+    <a href="#tecnologia">Tecnologia</a>
+    <a href="#objetivos">Objetivos</a>
+    <a href="#publico">Público-alvo</a>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#aplicacao">Aplicação</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

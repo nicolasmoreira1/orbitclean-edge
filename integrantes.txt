@@ -1,0 +1,27 @@
+===========================================
+  OrbitClean Edge — FIAP Global Solution 2026
+  Engenharia de Software — 1º Ano
+===========================================
+
+INTEGRANTES DO GRUPO
+
+Nome completo: Gabriel Juarez
+RM: 563680
+
+Nome completo: Andrey Luigi 
+RM: 569575
+
+Nome completo: Lucas Trevisan
+RM: 569731
+
+Nome completo: Nicolas Moreira
+RM: 571510
+
+Nome completo: Henrique da Silva
+RM: 569137
+
+===========================================
+Disciplina: Front-End Design
+Professor: Cyntia
+Prazo: 09/06/2026
+===========================================
